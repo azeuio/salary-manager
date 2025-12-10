@@ -17,7 +17,7 @@ A modern ASP.NET Core web application for managing employee salaries and visuali
 
 ## Tech Stack
 
-- **Framework**: ASP.NET Core 8
+- **Framework**: ASP.NET Core 10
 - **Database**: SQLite with Entity Framework Core
 - **Frontend**: Razor views, Bootstrap 5, Chart.js
 - **Language**: C#
