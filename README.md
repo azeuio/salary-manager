@@ -176,6 +176,10 @@ To reset the database, delete `salary_manager.db` and run the application again.
 - Salary review workflows
 - Performance ratings integration
 
+## Screenshots
+
+[Screenshots will be added here]
+
 ## License
 
 This project is provided as-is for educational and development purposes.
