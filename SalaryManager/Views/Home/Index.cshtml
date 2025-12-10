@@ -1,0 +1,67 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home";
+    var employeeCount = ViewData["EmployeeCount"] ?? 0;
+    var avgSalaryVal = ViewData["AvgSalary"] as decimal? ?? 0;
+    var avgSalary = Math.Round((double)avgSalaryVal, 0);
+    var totalPayrollVal = ViewData["TotalPayroll"] as decimal? ?? 0;
+    var totalPayroll = Math.Round((double)totalPayrollVal, 0);
+    var deptCount = ViewData["DepartmentCount"] ?? 0;
+}
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h1 class="display-4">Welcome to Salary Manager</h1>
+            <p class="lead">Manage and visualize employee salaries and data.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Employees</h5>
+                    <p class="card-text display-6">@employeeCount</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Average Salary</h5>
+                    <p class="card-text display-6">$@avgSalary.ToString("N0")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Payroll</h5>
+                    <p class="card-text display-6">$@totalPayroll.ToString("N0")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Departments</h5>
+                    <p class="card-text display-6">@deptCount</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">Quick Start</h4>
+                <p>
+                    View all employees in the <a href="/Employees/Index" class="alert-link">Employees</a> section,
+                    check out detailed <a href="/Employees/Analytics" class="alert-link">Analytics</a> with graphs,
+                    or <a href="/Employees/Create" class="alert-link">add a new employee</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
